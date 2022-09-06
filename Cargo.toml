@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "node",
+    "pallets/common",
+    "pallets/upward-messages",
+    "pallets/pos",
+    "pallets/minichain",
+    "pallets/template",
+    "runtime",
+]
+[profile.release]
+panic = "unwind"

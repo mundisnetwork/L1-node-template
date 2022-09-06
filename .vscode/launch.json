@@ -1,0 +1,27 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'mundis-layer1-node'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=mundis-layer1-node",
+                    "--package=mundis-layer1-node"
+                ],
+                "filter": {
+                    "name": "mundis-layer1-node",
+                    "kind": "bin"
+                }
+            },
+            "args": ["--dev"],
+            "cwd": "${workspaceFolder}",
+            "env": {"RUST_LOG": "debug,wasmtime_cranelift=warn"}
+        }
+    ]
+}
